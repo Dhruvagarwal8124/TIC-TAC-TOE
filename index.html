@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-TAC-TOE</title>
+    <!-- Linking external CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Main flex container holding both sections -->
+    <div id="arrangement">
+
+        <!-- Game section -->
+        <section id="gamebody">
+            <div class="heading">
+                <h3>TIC-TAC-TOE</h3>
+            </div>
+
+            <!-- 3x3 grid for the game -->
+            <div id="game">
+                <div data-cell-index="0" class="cell"></div>
+                <div data-cell-index="1" class="cell"></div>
+                <div data-cell-index="2" class="cell"></div>
+                <div data-cell-index="3" class="cell"></div>
+                <div data-cell-index="4" class="cell"></div>
+                <div data-cell-index="5" class="cell"></div>
+                <div data-cell-index="6" class="cell"></div>
+                <div data-cell-index="7" class="cell"></div>
+                <div data-cell-index="8" class="cell"></div>
+            </div>
+
+            <!-- Game status display (turn/win/draw) -->
+            <div>
+                <h1 class="gameStatus"></h1>
+            </div>
+
+            <!-- Button to reset the game -->
+            <button class="restartGame">RESET</button>
+        </section>
+
+        <!-- Result section to display winners -->
+        <section id="results">
+            <div>
+                <h3>RESULTS</h3>
+                <!-- List of winners -->
+                <ol id="winList"></ol>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Linking JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

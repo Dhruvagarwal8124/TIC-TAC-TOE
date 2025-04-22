@@ -1,0 +1,134 @@
+body {
+  background-color: #f4f4;
+  /* Light background */
+}
+
+/* Flexbox layout for vertical stacking */
+#arrangement {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Shared styling for both sections */
+section {
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 900px;
+  border: 0;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow: 0px 10px 36px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering game body using transform */
+#gamebody {
+  padding: 20px;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  /* Moves left by 50% of width */
+}
+
+/* Title styling */
+.heading {
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 20px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Tic-tac-toe grid layout */
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 180px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* Each cell in the grid */
+.cell {
+  font-family: sans-serif;
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+  box-shadow: 0 0 0 1px #ccc;
+  line-height: 50px;
+  font-size: 20px;
+}
+
+/* Reset game button */
+.restartGame {
+  border: 0;
+  border-radius: 30px;
+  width: 70px;
+  height: 40px;
+  color: black;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.restartGame:hover {
+  background-color: grey;
+  color: black;
+}
+
+/* Results container */
+#results {
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* List items inside results */
+#results li {
+  padding: 3px;
+  font-size: 15px;
+}
+
+/* Responsive styles for screens < 1200px */
+@media (max-width: 1200px) {
+  body {
+    overflow-y: auto;
+    /* Allow vertical scroll */
+  }
+
+  #arrangement {
+    flex-direction: column;
+    /* Stack sections vertically */
+    align-items: center;
+    /*  Center children horizontally */
+  }
+
+  section {
+    width: 100%;
+    /* Full width for small screens */
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 10px 36px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  #gamebody {
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    position: static;
+    /* Reset positioning */
+    transform: none;
+  }
+
+  #results {
+    width: 90vw;
+    /* Responsive width */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
